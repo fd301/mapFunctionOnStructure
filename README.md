@@ -27,7 +27,7 @@ The Gaussian graphical model based on the Iterative Proportional Scaling algorit
 **Output of fun2strucBootstrap_v01.py:**
 - For each bootstrap iteration the probabilities for all the connections are stored along with the row and column indices to allow reconstructing the n-by-n-by-n*n matrix. This matrix provides the probabilities of each structural connection to be relate with each functional connection.
 
-**Functions:**
+### Functions:
 The software includes the following functions:
 - *fun2strucInt_v01.py:*
   Main script to run. All the parameters and paths are set here.
