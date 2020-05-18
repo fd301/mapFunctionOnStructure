@@ -7,7 +7,7 @@ I also provide the scripts used to implement the bootstrap procedure in our IEEE
 The Gaussian graphical model based on the Iterative Proportional Scaling algorithm is written by Dr. Gael Varoquaux. (Main script: fun2strucBootstrap_v01.py)
 
 ## Description of the Software
-**Inputs:**
+### Inputs:
 - The structural connectivity matrices. 
   n-by-n arrays contained in text files within the folder specified. Where n is the number of total regions examined.
 - The average time-series of fMRI data. 
@@ -21,10 +21,10 @@ The Gaussian graphical model based on the Iterative Proportional Scaling algorit
   - A threshold, thres. 
     The structural connection with probability within the highest thres (as percentage) will be displayed.
 
-**Output of fun2strucInt_v01.py:**
+### Output of fun2strucInt_v01.py:
 - An adjacency matrix that displays the structural connections related to the functional connections estimated from the subset of regions provided.
 
-**Output of fun2strucBootstrap_v01.py:**
+### Output of fun2strucBootstrap_v01.py:**
 - For each bootstrap iteration the probabilities for all the connections are stored along with the row and column indices to allow reconstructing the n-by-n-by-n*n matrix. This matrix provides the probabilities of each structural connection to be relate with each functional connection.
 
 ### Functions:
@@ -52,4 +52,25 @@ The software includes the following functions:
   It runs randomised Lasso and it returns a list of elements. Each element corresponds to a functional connection and it is a list with * *N* * values. Each value is the probability the underlying structural connection to be selected. 
 - *visual_res:*
   Visualise the results for a number of functional connections picked. Note that if a structural connection is picked in association with more than one functional connection, its probability will be averaged. Once randomised Lasso has finished. You can call this function independently to visualise the results for any functional connection. 
+  
+## Software Requirements
+t has been tested on a system with the following configuration:
+- Linux (64-bit machines) due to the dependency on [http://www.cise.ufl.edu/research/sparse/CSparse/ CSparse library].
+- [http://ipython.org/ ipython], version 2.6.5 
+- Python packages used:
+ - [http://scikit-learn.org/stable/ scikit-learn], for [http://scikit-learn.org/dev/modules/generated/sklearn.linear_model.RandomizedLasso.html randomised Lasso] and the [http://scikit-learn.org/dev/modules/generated/sklearn.covariance.LedoitWolf.html Ledoit-Wolf estimator].
+ - [http://numpy.scipy.org/ numpy], version 1.3.0
+ - [http://www.scipy.org/ scipy], version 0.7.0
+
+## Disclaimer
+This software is provided 'as is' and without any implied support or guarantee. \n
+We would like to hear from you, if you find this work useful.
+
+## Related Publications
+
+- *F. Deligianni*, G. Varoquaux, B. Thirion, D.J. Sharp, C. Ledig, R. Leech and D. Rueckert, A Framework for Inter-Subject Prediction of Functional Connectivity from Structural Networks, /IEEE Trans on Med Imaging/, [http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6575192&sortType%3Dasc_p_Sequence%26filter%3DAND%28p_IS_Number%3A4359023%29 in press].
+- *F. Deligianni*, G. Varoquaux, B. Thirion, E. Robinson, D.J. Sharp, A. D. Edwards and D. Rueckert, Relating brain functional connectivity to anatomical connections: Model Selection, /NIPS-MLNI/, 2011. [./pdfs/mypubs/NIPS-MLNI11.pdf pdf]
+- *F. Deligianni*, G. Varoquaux, B. Thirion, E.Robinson, D.Sharp, A.Edwards, and D.Rueckert, A Probabilistic Framework to Infer Brain Functional Connectivity from Anatomical Connections, /IPMI/, 296-307, 2011. [./pdfs/mypubs/probIPMI11.pdf pdf]
+
+
 
