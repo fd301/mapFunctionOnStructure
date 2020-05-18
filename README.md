@@ -68,9 +68,9 @@ We would like to hear from you, if you find this work useful.
 
 ## Related Publications
 
-- *F. Deligianni*, G. Varoquaux, B. Thirion, D.J. Sharp, C. Ledig, R. Leech and D. Rueckert, A Framework for Inter-Subject Prediction of Functional Connectivity from Structural Networks, /IEEE Trans on Med Imaging/, [http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6575192&sortType%3Dasc_p_Sequence%26filter%3DAND%28p_IS_Number%3A4359023%29 in press].
-- *F. Deligianni*, G. Varoquaux, B. Thirion, E. Robinson, D.J. Sharp, A. D. Edwards and D. Rueckert, Relating brain functional connectivity to anatomical connections: Model Selection, /NIPS-MLNI/, 2011. [./pdfs/mypubs/NIPS-MLNI11.pdf pdf]
-- *F. Deligianni*, G. Varoquaux, B. Thirion, E.Robinson, D.Sharp, A.Edwards, and D.Rueckert, A Probabilistic Framework to Infer Brain Functional Connectivity from Anatomical Connections, /IPMI/, 296-307, 2011. [./pdfs/mypubs/probIPMI11.pdf pdf]
+- *F. Deligianni*, G. Varoquaux, B. Thirion, D.J. Sharp, C. Ledig, R. Leech and D. Rueckert, [A Framework for Inter-Subject Prediction of Functional Connectivity from Structural Networks](https://www.ncbi.nlm.nih.gov/pubmed/23934663), IEEE Trans on Med Imaging, 2013.
+- *F. Deligianni*, G. Varoquaux, B. Thirion, E. Robinson, D.J. Sharp, A. D. Edwards and D. Rueckert, Relating brain functional connectivity to anatomical connections: Model Selection, NIPS-MLNI, 2011. 
+- *F. Deligianni*, G. Varoquaux, B. Thirion, E.Robinson, D.Sharp, A.Edwards, and D.Rueckert, A Probabilistic Framework to Infer Brain Functional Connectivity from Anatomical Connections, IPMI, 296-307, 2011.
 
 
 
