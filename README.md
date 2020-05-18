@@ -33,21 +33,21 @@ The software includes the following functions:
   Main script to run. All the parameters and paths are set here.
   - Load structural connectivity matrices and symmetrizes them.
   - Load functional time series and estimate the precision matrix based on the LedoitWolf estimator.
-  - It calls: /StrucSup/, /cs_amdW/, /prepChol/, /visual_res/.  
-- fun2strucBootstrap_v01.py:
+  - It calls: *StrucSup*, *cs_amdW*, *prepChol*, *visual_res*.  
+- *fun2strucBootstrap_v01.py:*
   Main script to run the bootstrap algorithm to estimate confidence intervals. All the parameters and paths are set here.
   - Load structural connectivity matrices and symmetrizes them.
   - Load functional time series and estimate the precision matrix based on the LedoitWolf estimator.
-  - It calls: /StrucSup/, /cs_amdW/, /prepChol/, /prop_scaling/. 
-- StrucSup: 
-  Estimate the structural support. This is a square array /n/-by-/n/ with with ones where a connection is supported and zero for the rest. 
+  - It calls: *StrucSup*, *cs_amdW*, *prepChol*, *prop_scaling*. 
+- *StrucSup*: 
+  Estimate the structural support. This is a square array *n-by-n* with with ones where a connection is supported and zero for the rest. 
 - *cs_amdW:* 
-  Estimate the /Minimum degree ordering/ that provide a sparser cholesky decomposition. Note that this is a function that wraps [http://www.cise.ufl.edu/research/sparse/CSparse/CSparse/Source/cs_amd.c cs_amd.c] function of the [http://www.cise.ufl.edu/research/sparse/CSparse/ CSparse library], directly.
-  -- *libctest.so.1.0:* This is a compiled version of [http://www.cise.ufl.edu/research/sparse/CSparse/ CSparse library] on /Ubuntu 10.04.1 LTS/ (64-bit machine), linked dynamically. If you have a different system you need to rebuild the library. In addition, if your system is a 32-bit machine, you will need to modify /my_cs_amd.py/ to use /c_int32/.
+  Estimate the *Minimum degree ordering* that provide a sparser cholesky decomposition. Note that this is a function that wraps [http://www.cise.ufl.edu/research/sparse/CSparse/CSparse/Source/cs_amd.c cs_amd.c] function of the [http://www.cise.ufl.edu/research/sparse/CSparse/ CSparse library], directly.
+  -- *libctest.so.1.0:* This is a compiled version of [http://www.cise.ufl.edu/research/sparse/CSparse/ CSparse library] on *Ubuntu 10.04.1 LTS* (64-bit machine), linked dynamically. If you have a different system you need to rebuild the library. In addition, if your system is a 32-bit machine, you will need to modify *my_cs_amd.py* to use *c_int32*.
 - *prop_scaling:* 
   Estimate the precision matrix based on the Iterative Proportional Scaling (IPS) and the structural support.  
 - *prepChol:* 
-  Estimate the cholesky decomposition based on the ordering provided. It also reshapes the data to be /N/-by-/p/ arrays. Where /N/ is the total non-zero number of connections and /p/ is the number of subjects.
+  Estimate the cholesky decomposition based on the ordering provided. It also reshapes the data to be *N-by-p* arrays. Where *N* is the total non-zero number of connections and /p/ is the number of subjects.
 - *run_randomisedLasso:* 
   It runs randomised Lasso and it returns a list of elements. Each element corresponds to a functional connection and it is a list with * *N* * values. Each value is the probability the underlying structural connection to be selected. 
 - *visual_res:*
