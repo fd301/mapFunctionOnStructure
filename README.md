@@ -63,7 +63,7 @@ t has been tested on a system with the following configuration:
  - [scipy](http://www.scipy.org/), version 0.7.0
 
 ## Disclaimer
-This software is provided 'as is' and without any implied support or guarantee. \n
+This software is provided 'as is' and without any implied support or guarantee. 
 We would like to hear from you, if you find this work useful.
 
 ## Related Publications
