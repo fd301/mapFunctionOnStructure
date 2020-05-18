@@ -42,8 +42,8 @@ The software includes the following functions:
 - *StrucSup*: 
   Estimate the structural support. This is a square array *n-by-n* with with ones where a connection is supported and zero for the rest. 
 - *cs_amdW:* 
-  Estimate the *Minimum degree ordering* that provide a sparser cholesky decomposition. Note that this is a function that wraps [http://www.cise.ufl.edu/research/sparse/CSparse/CSparse/Source/cs_amd.c cs_amd.c] function of the [http://www.cise.ufl.edu/research/sparse/CSparse/ CSparse library], directly.
-  -- *libctest.so.1.0:* This is a compiled version of [http://www.cise.ufl.edu/research/sparse/CSparse/ CSparse library] on *Ubuntu 10.04.1 LTS* (64-bit machine), linked dynamically. If you have a different system you need to rebuild the library. In addition, if your system is a 32-bit machine, you will need to modify *my_cs_amd.py* to use *c_int32*.
+  Estimate the *Minimum degree ordering* that provide a sparser cholesky decomposition. Note that this is a function that wraps [cs_amd.c](http://www.cise.ufl.edu/research/sparse/CSparse/CSparse/Source/cs_amd.c) function of the [CSparse library](http://www.cise.ufl.edu/research/sparse/CSparse/), directly.
+  -- *libctest.so.1.0:* This is a compiled version of [CSparse library](http://www.cise.ufl.edu/research/sparse/CSparse/) on *Ubuntu 10.04.1 LTS* (64-bit machine), linked dynamically. If you have a different system you need to rebuild the library. In addition, if your system is a 32-bit machine, you will need to modify *my_cs_amd.py* to use *c_int32*.
 - *prop_scaling:* 
   Estimate the precision matrix based on the Iterative Proportional Scaling (IPS) and the structural support.  
 - *prepChol:* 
@@ -55,12 +55,12 @@ The software includes the following functions:
   
 ## Software Requirements
 t has been tested on a system with the following configuration:
-- Linux (64-bit machines) due to the dependency on [http://www.cise.ufl.edu/research/sparse/CSparse/ CSparse library].
-- [http://ipython.org/ ipython], version 2.6.5 
+- Linux (64-bit machines) due to the dependency on [CSparse library] (http://www.cise.ufl.edu/research/sparse/CSparse/).
+- [ipython](http://ipython.org/ ipython), version 2.6.5 
 - Python packages used:
- - [http://scikit-learn.org/stable/ scikit-learn], for [http://scikit-learn.org/dev/modules/generated/sklearn.linear_model.RandomizedLasso.html randomised Lasso] and the [http://scikit-learn.org/dev/modules/generated/sklearn.covariance.LedoitWolf.html Ledoit-Wolf estimator].
- - [http://numpy.scipy.org/ numpy], version 1.3.0
- - [http://www.scipy.org/ scipy], version 0.7.0
+ - [scikit-learn](http://scikit-learn.org/stable/), for [randomised Lasso](http://scikit-learn.org/dev/modules/generated/sklearn.linear_model.RandomizedLasso.html) and the [Ledoit-Wolf estimator](http://scikit-learn.org/dev/modules/generated/sklearn.covariance.LedoitWolf.html).
+ - [numpy](http://numpy.scipy.org/), version 1.3.0
+ - [scipy](http://www.scipy.org/), version 0.7.0
 
 ## Disclaimer
 This software is provided 'as is' and without any implied support or guarantee. \n
@@ -68,7 +68,7 @@ We would like to hear from you, if you find this work useful.
 
 ## Related Publications
 
-- *F. Deligianni*, G. Varoquaux, B. Thirion, D.J. Sharp, C. Ledig, R. Leech and D. Rueckert, [A Framework for Inter-Subject Prediction of Functional Connectivity from Structural Networks](https://www.ncbi.nlm.nih.gov/pubmed/23934663), IEEE Trans on Med Imaging, 2013.
+- *F. Deligianni*, G. Varoquaux, B. Thirion, D.J. Sharp, C. Ledig, R. Leech and D. Rueckert, [A Framework for Inter-Subject Prediction of Functional Connectivity from Structural Networks](https://ieeexplore.ieee.org/document/6575192), IEEE Trans on Med Imaging, 2013.
 - *F. Deligianni*, G. Varoquaux, B. Thirion, E. Robinson, D.J. Sharp, A. D. Edwards and D. Rueckert, Relating brain functional connectivity to anatomical connections: Model Selection, NIPS-MLNI, 2011. 
 - *F. Deligianni*, G. Varoquaux, B. Thirion, E.Robinson, D.Sharp, A.Edwards, and D.Rueckert, A Probabilistic Framework to Infer Brain Functional Connectivity from Anatomical Connections, IPMI, 296-307, 2011.
 
